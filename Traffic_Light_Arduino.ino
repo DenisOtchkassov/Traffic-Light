@@ -114,12 +114,14 @@ void loop() {
 
     case 1:
       if (currentMillis - previousMillis >= yellowDuration) {
-        digitalWrite(redPin1, LOW);
-        digitalWrite(yellowPin1, LOW);
-        digitalWrite(greenPin1, HIGH);
         digitalWrite(redPin2, HIGH);
         digitalWrite(yellowPin2, LOW);
         digitalWrite(greenPin2, LOW);
+        delay(1000);
+        digitalWrite(redPin1, LOW);
+        digitalWrite(yellowPin1, LOW);
+        digitalWrite(greenPin1, HIGH);
+
 
         if (pedestrianRequested) {
           pedestrianPhase(1);
@@ -150,6 +152,7 @@ void loop() {
         digitalWrite(redPin1, HIGH);
         digitalWrite(yellowPin1, LOW);
         digitalWrite(greenPin1, LOW);
+        delay(1000);
         digitalWrite(redPin2, LOW);
         digitalWrite(yellowPin2, LOW);
         digitalWrite(greenPin2, HIGH);
